@@ -7,4 +7,4 @@
 
 **Palette de couleur :** [Coolors.co](https://coolors.co/000000-2f4550-586f7c-b8dbd9-f4f4f9)
 ## Diagramme 
-
+![dezemma_daniel_PS1.1__582-324MO.png](assets/dezemma_daniel_PS1.1__582-324MO.png)
