@@ -1,4 +1,5 @@
 # Titanium
+![earth.jpg](assets/img/earth.jpg)
 ## Développement web - [Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros)
 
 **Genre :** Sc-Fi, Action, Aventure, Aliens, Dystopie
