@@ -3,7 +3,7 @@
     titre : "10h" ,
     description : "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont chnagé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées. Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de toi.",
     image : city,
-    boutons : "aller  chez toi, aller à la base militaire",
+    boutons : "aller chez toi, aller à la base militaire",
 },
  base : {
     titre : "9h" ,
