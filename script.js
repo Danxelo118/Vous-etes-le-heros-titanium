@@ -26,7 +26,7 @@
 };
 
  function goToChapter(chapter) {
-    // Si le chapitre existe 
+    // Si le chapitre existe dans le code
     //On affiche avec la console.log() son titre, sa description et ses boutons (clés)
     // Sinon 
     // Afficher un message d'erreur
