@@ -2,13 +2,13 @@
  debut : {
     titre : "10h" ,
     description : "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont chnagé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées. Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de toi.",
-    image : city,
+    image : [],
     boutons : "aller chez toi, aller à la base militaire",
 },
  base : {
-    titre : "9h" ,
+    titre : "base" ,
     description : "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles.",
-    image : city ,
+    image : [] ,
     boutons : "Prendre une corolla, Prendre une mustange",
  },
  route : {
@@ -21,15 +21,30 @@
     titre : "20h",
     description : "Le véhicule émet beaucoup de bruits de moteur, cela attire les créatures aliens et ils bloquent le chemin tu te retrouves coincé à mi-chemin de la destination, tu lâches ta voirture pour continuer à pied mais perd ta carte, tu va à la mémoire. Il est 20h00, après une longue marche tu vois un groupe de créature dévorer le cadavre d'une fillette, ils bloquent le chemin. ",
     image : [],
-    boutons : "Tu les affrontes pour dégager le chemin, Tu fais demi-tour et trouves un détour",
+    boutons : {titre : "Recommencer | goToChapter(debut)", "destination" : "debut"}
+              
  },
+
 };
 
- function goToChapter(chapter) {
-    // Si le chapitre existe dans le code
-    //On affiche avec la console.log() son titre, sa description et ses boutons (clés)
-    // Sinon 
-    // Afficher un message d'erreur
+ function goToChapter(chapterCle) {
+    
+    const chapter = chapters[chapterCle];
+    if (!chapter)  {
+      console.error("Le chapitre n'existe pas.");
+      return;
+    }
+
+    console.log("titre du chapitre:", chapter.titre);
+    console.log("description du chapitre", chapter.description);
+    console.log("image du chapitre", chapter.image);
+    console.log("boutons:");
+    chapter.boutons.forEach((boutons) =>  {
+      console.log("" + boutons.titre + "(Destination:" + boutons.destination +  ")");
+    });
+  
  }
+
+
 
  // Ici on doit appeler la fonction pour faire apparaître le premier chapitre au chargement de la page.
