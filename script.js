@@ -1,4 +1,4 @@
-chapters = {
+ chapters = {
    acceuil: {
       titre: "Le commencement",
       description: "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont chnagé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées.",
@@ -107,6 +107,27 @@ function goToChapter(chapterKey) {
       console.error("Le chapitre n'existe pas.");
       return;
    }
+
+   const titleElement = document.getElementById("chapter-title");
+   const descriptionElement = document.getElementById("chapter-description");
+   const imageElement = document.getElementById("chapter-image");
+   titleElement.textContent = chapter.titre;
+   descriptionElement.textContent = chapter.description;
+   imageElement.src = chapter.image;
+
+   const buttonsContainer = document.getElementById("chapter-buttons");
+   while (buttonsContainer.firstChild) {
+      buttonsContainer.removeChild(buttonsContainer.firstChild);
+   }
+
+   chapter.boutons.forEach((button) => {
+      const newButton = document.createElement("button");
+      newButton.textContent = button.titre;
+      newButton,addEventListener("click", () => {
+         goToChapter(button.destination);
+      });
+      buttonsContainer.appendChild(newButton);
+   });
 
    console.log(chapter.titre);
    console.log(chapter.description);
