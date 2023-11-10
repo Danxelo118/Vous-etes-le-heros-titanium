@@ -60,7 +60,9 @@ p {
     max-width: 100%;
 }
 
-
+#video {
+    max-width: 100%;
+}
 
 button {
     border-radius: 10px;
