@@ -11,7 +11,9 @@ const chapters = {
    debut: {
       titre: "10h",
       description: "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de toi.",
-      image: "./assets/img/alone.jpg",
+      image: "",
+      video: "./assets/videos/pluie.mp4",
+      son: "",
       boutons:
          [{ titre: 'Aller chez toi', destination: 'maison' },
          { titre: 'Aller à la base', destination: 'base' }]
@@ -22,6 +24,8 @@ const chapters = {
       titre: " Au bercaille",
       description: "Des créatures aliens présentes dans la maison te tuent.",
       image: "./assets/img/aliens-death.jpg",
+      video: "",
+      son: "",
       boutons:
          [{ titre: 'Recommencer', destination: 'acceuil' }]
    },
@@ -101,9 +105,13 @@ const chapters = {
 
 let twist = false;
 function goToChapter(chapterKey) {
-
+   const song = new Audio('assets/audio/ambiant.mp3');
+   song.play()
    const chapter = chapters[chapterKey];
-
+   song.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }, false);
    if (!chapter) {
       console.error("Le chapitre n'existe pas.");
       return;
@@ -112,9 +120,11 @@ function goToChapter(chapterKey) {
    const titleElement = document.getElementById("chapter-title");
    const descriptionElement = document.getElementById("chapter-description");
    const imageElement = document.getElementById("chapter-image");
+   const videoElement = document.getElementById("video");
    titleElement.textContent = chapter.titre;
    descriptionElement.textContent = chapter.description;
    imageElement.src = chapter.image;
+   videoElement.src = chapter.video;
 
    const buttonsContainer = document.getElementById("chapter-buttons");
    while (buttonsContainer.firstChild) {
