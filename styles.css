@@ -79,7 +79,7 @@ button:hover {
     border: 5px solid #2f4550;
 }
 
-.boutons {
+.barre {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

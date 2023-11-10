@@ -1,4 +1,4 @@
- const chapters = {
+chapters = {
    acceuil: {
       titre: "Le commencement",
       description: "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont chnagé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées.",
@@ -29,7 +29,7 @@
 
    base: {
       titre: "La base militaire",
-      description: "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang : bruyant mais rapide et une Corolla, subtile mais plus lente.",
+      description: "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles.",
       image: "./assets/img/base.jpg",
       boutons:
          [{ titre: 'Mustang', destination: 'mustang' },
@@ -56,7 +56,7 @@
 
    detour: {
       titre: "Stratégie de retrait",
-      description: "Tu arrives juste à temps aux portes du camp vers 21h58 mais les survivants déja inquiets de la disparition d'un de leur membre te font pas confiance et te laisse dehors. Tu meurs brûlé par l'acide.",
+      description: "Tu arrives juste à temps aux portes du camp vers 21h58 mais les survivants déja inquiets de la disparition de la gamine te font pas confiance et te laisse dehors. Tu meurs brûlé par l'acide.",
       image: "./assets/img/road.jpg",
       boutons:
          [{ titre: 'Recommencer', destination: 'acceuil' }]
@@ -68,12 +68,12 @@
       description: "Tu arrives proche de la destination mais le réservoir se vide rapidement tu n'a plus de gas. Il est 18h00 tu  continues le chemin à pied et trouve un enfant seul se faire poursuivre par une créature.",
       image: "./assets/img/corolla.jpg",
       boutons:
-         [{ titre: 'Intervenir', destination: 'gamine' },
-         { titre: 'Continuer', destination: 'enfant' }]
+         [{ titre: 'Intervenir', destination: 'acceuil' },
+         { titre: 'Continuer', destination: 'acceuil' }]
    },
 
    enfant: {
-      titre: "Concentré",
+      titre: "Dévorée",
       description: "Tu continues ton chemin et laisse la gamine toute seule. Après 30 minutes de marches, tu trouves finalement devant les portes du camp!",
       image: "./assets/img/camp.jpg",
       boutons:
@@ -90,7 +90,7 @@
 
    gamine: {
       titre: "Une nouvelle amie",
-      description: "Tu sauves la fille. Elle te remercie et elle te guide vers le camp de survivants, tu y arrive à 19h30 sans problème. Les survivants t'acceuillent dans leur groupe car tu as sauvé la gamine du camp. Tu survis. Félicitations! ",
+      description: "Elle te remercie et elle te guide vers le camp de survivants, tu y arrive à 19h30 sans problème. Les survivants t'acceuillent dans leur groupe car tu as sauvé la gamine du camp. Tu survis. Félicitations! ",
       image: "./assets/img/good-camp.jpg",
       boutons:
          [{ titre: 'Recommencer', destination: 'acceuil' }]
@@ -99,7 +99,6 @@
 
 };
 
-let twist = false;
 function goToChapter(chapterKey) {
 
    const chapter = chapters[chapterKey];
@@ -109,33 +108,14 @@ function goToChapter(chapterKey) {
       return;
    }
 
-   const titleElement = document.getElementById("chapter-title");
-   const descriptionElement = document.getElementById("chapter-description");
-   const imageElement = document.getElementById("chapter-image");
-   titleElement.textContent = chapter.titre;
-   descriptionElement.textContent = chapter.description;
-   imageElement.src = chapter.image;
+   console.log(chapter.titre);
+   console.log(chapter.description);
+   console.log(chapter.image);
+   console.log("boutons:");
 
-   const buttonsContainer = document.getElementById("chapter-buttons");
-   while (buttonsContainer.firstChild) {
-      buttonsContainer.removeChild(buttonsContainer.firstChild);
-   }
-
-   chapter.boutons.forEach((button) => {
-      const nouveauBtn = document.createElement("button");
-      nouveauBtn.textContent = button.titre;
-      nouveauBtn.addEventListener("click", () => {
-         goToChapter(button.destination);
-      });
-      buttonsContainer.appendChild(nouveauBtn);
+   chapter.boutons.forEach((bouton) => {
+      console.log(bouton.destination);
    });
-
-   chapter.boutons.forEach((button) => {
-      console.log(button.destination);
-   });
-   if (chapterKey === "twist" ) {
-      twist = true;
-  }
 
 }
 goToChapter("acceuil");
