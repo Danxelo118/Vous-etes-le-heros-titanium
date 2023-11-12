@@ -15,7 +15,7 @@ const chapters = {
       "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de toi.",
     image: "",
     video: "./assets/videos/pluie.mp4",
-    son: "",
+    son: "./assets/audio/rain.mp3",
     boutons: [
       { titre: "Aller chez toi", destination: "maison" },
       { titre: "Aller à la base", destination: "base" },
@@ -36,6 +36,8 @@ const chapters = {
     description:
       "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang : bruyant mais rapide et une Corolla, subtile mais plus lente.",
     image: "./assets/img/base.jpg",
+    video: "",
+    son:"",
     boutons: [
       { titre: "Mustang", destination: "mustang" },
       { titre: "Corolla", destination: "corolla" },
@@ -47,6 +49,8 @@ const chapters = {
     description:
       "Le véhicule émet beaucoup de bruits de moteur, cela attire les créatures aliens et ils bloquent le chemin tu te retrouves coincé à mi-chemin de la destination, tu lâches ta voirture pour continuer à pied mais perd ta carte, tu va à la mémoire. Il est 20h00, après une longue marche tu vois un groupe de créature dévorer le cadavre d'une fillette, ils bloquent le chemin. ",
     image: "./assets/img/mustang.jpg",
+    video: "",
+    son:"./assets/audio/mustang.mp3",
     boutons: [
       { titre: "Affronter", destination: "affrontement" },
       { titre: "Demi-tour", destination: "detour" },
@@ -57,6 +61,8 @@ const chapters = {
     titre: "Monté en courage",
     description: "Tu finis par mourir, ils étaient trop nombreux pour toi",
     image: "./assets/img/fight.jpg",
+    video: "",
+    son: "./assets/audio/aliens.mp3",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
   },
 
@@ -65,6 +71,8 @@ const chapters = {
     description:
       "Tu arrives juste à temps aux portes du camp vers 21h58 mais les survivants déja inquiets de la disparition d'un de leur membre te font pas confiance et te laisse dehors. Tu meurs brûlé par l'acide.",
     image: "./assets/img/road.jpg",
+    video: "",
+    son: "",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
   },
 
@@ -73,6 +81,8 @@ const chapters = {
     description:
       "Tu arrives proche de la destination mais le réservoir se vide rapidement tu n'a plus de gas. Il est 18h00 tu  continues le chemin à pied et trouve un enfant seul se faire poursuivre par une créature.",
     image: "./assets/img/corolla.jpg",
+    video: "",
+    son: "",
     boutons: [
       { titre: "Intervenir", destination: "gamine" },
       { titre: "Continuer", destination: "enfant" },
@@ -84,6 +94,8 @@ const chapters = {
     description:
       "Tu continues ton chemin et laisse la gamine toute seule. Après 30 minutes de marches, tu trouves finalement devant les portes du camp!",
     image: "./assets/img/camp.jpg",
+    video: "",
+    son: "",
     boutons: [{ titre: "Cognez", destination: "twist" }],
   },
 
@@ -100,6 +112,8 @@ const chapters = {
     description:
       "Tu sauves la fille. Elle te remercie et elle te guide vers le camp de survivants, tu y arrive à 19h30 sans problème. Les survivants t'acceuillent dans leur groupe car tu as sauvé la gamine du camp. Tu survis. Félicitations! ",
     image: "./assets/img/good-camp.jpg",
+    video: "",
+    son: "",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
   },
 };
