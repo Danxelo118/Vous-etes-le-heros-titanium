@@ -19,6 +19,7 @@ const chapters = {
     boutons: [
       { titre: "Aller chez toi", destination: "maison" },
       { titre: "Aller à la base", destination: "base" },
+      { titre: "Recommencer", destination: "acceuil" }
     ],
   },
 
@@ -41,6 +42,7 @@ const chapters = {
     boutons: [
       { titre: "Mustang", destination: "mustang" },
       { titre: "Corolla", destination: "corolla" },
+      { titre: "Recommencer", destination: "acceuil" }
     ],
   },
 
@@ -54,6 +56,7 @@ const chapters = {
     boutons: [
       { titre: "Affronter", destination: "affrontement" },
       { titre: "Demi-tour", destination: "detour" },
+      { titre: "Recommencer", destination: "acceuil" }
     ],
   },
 
@@ -73,7 +76,8 @@ const chapters = {
     image: "./assets/img/road.jpg",
     video: "",
     son: "",
-    boutons: [{ titre: "Recommencer", destination: "acceuil" }],
+    boutons: [
+      { titre: "Recommencer", destination: "acceuil" },],
   },
 
   corolla: {
@@ -86,6 +90,7 @@ const chapters = {
     boutons: [
       { titre: "Intervenir", destination: "gamine" },
       { titre: "Continuer", destination: "enfant" },
+      
     ],
   },
 
@@ -95,8 +100,10 @@ const chapters = {
       "Tu continues ton chemin et laisse la gamine toute seule. Après 30 minutes de marches, tu trouves finalement devant les portes du camp!",
     image: "./assets/img/camp.jpg",
     video: "",
-    son: "",
-    boutons: [{ titre: "Cognez", destination: "twist" }],
+    son: "assets/audio/door.mp3",
+    boutons: [
+      { titre: "Cognez", destination: "twist" },
+      {titre: "Recommencer", destination: "acceuil" }],
   },
 
   twist: {
@@ -104,6 +111,8 @@ const chapters = {
     description:
       "La fille que tu avais laissé à son sort te répond à travers l'ouverture de la porte. Elle te reconnaît et les autres réfugiés te refusent l'accès. Tu te retrouves seul dehors et il est 10h... Le nuage commence à faire son apparition.",
     image: "./assets/img/fille-camp.jpg",
+    video: "",
+    son: "",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
   },
 
