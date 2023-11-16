@@ -38,7 +38,7 @@ const chapters = {
       "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang : bruyant mais rapide et une Corolla, subtile mais plus lente.",
     image: "./assets/img/base.jpg",
     video: "",
-    son:"",
+    son: "",
     boutons: [
       { titre: "Mustang", destination: "mustang" },
       { titre: "Corolla", destination: "corolla" },
@@ -52,7 +52,7 @@ const chapters = {
       "Le véhicule émet beaucoup de bruits de moteur, cela attire les créatures aliens et ils bloquent le chemin tu te retrouves coincé à mi-chemin de la destination, tu lâches ta voirture pour continuer à pied mais perd ta carte, tu va à la mémoire. Il est 20h00, après une longue marche tu vois un groupe de créature dévorer le cadavre d'une fillette, ils bloquent le chemin. ",
     image: "./assets/img/mustang.jpg",
     video: "",
-    son:"./assets/audio/mustang.mp3",
+    son: "./assets/audio/mustang.mp3",
     boutons: [
       { titre: "Affronter", destination: "affrontement" },
       { titre: "Demi-tour", destination: "detour" },
@@ -84,13 +84,13 @@ const chapters = {
     titre: "18h ",
     description:
       "Tu arrives proche de la destination mais le réservoir se vide rapidement tu n'a plus de gas. Il est 18h00 tu  continues le chemin à pied et trouve un enfant seul se faire poursuivre par une créature.",
-    image: "./assets/img/corolla.jpg",
-    video: "",
+    image: "",
+    video: "assets/videos/corolla.mp4",
     son: "",
     boutons: [
       { titre: "Intervenir", destination: "gamine" },
       { titre: "Continuer", destination: "enfant" },
-      
+
     ],
   },
 
@@ -103,7 +103,7 @@ const chapters = {
     son: "assets/audio/door.mp3",
     boutons: [
       { titre: "Cognez", destination: "twist" },
-      {titre: "Recommencer", destination: "acceuil" }],
+      { titre: "Recommencer", destination: "acceuil" }],
   },
 
   twist: {
@@ -127,9 +127,13 @@ const chapters = {
   },
 };
 
+
+
 const song = new Audio("./assets/audio/background.mp3");
 
 let twist = false;
+
+let buttonsContainer;
 
 function save(chapterKey) {
   localStorage.setItem("currentChapter", chapterKey);
@@ -165,14 +169,14 @@ function save(chapterKey) {
   videoElement.src = chapter.video;
   sonElement.src = chapter.son;
 
-  const buttonsContainer = document.getElementById("chapter-buttons");
   while (buttonsContainer.firstChild) {
     buttonsContainer.removeChild(buttonsContainer.firstChild);
   }
 
+
   chapter.boutons.forEach((button) => {
 
-      song.play();
+    song.play();
 
     const nouveauBtn = document.createElement("button");
     nouveauBtn.textContent = button.titre;
@@ -190,10 +194,31 @@ function save(chapterKey) {
   }
 }
 
+function Réinitialiser() {
+  localStorage.clear();
+  save("acceuil");
+  goToChapter("acceuil");
+}
+
+
+const boutonRecommencer = document.createElement("button");
+boutonRecommencer.textContent = "Recommencer";
+boutonRecommencer.addEventListener("click", Réinitialiser);
+buttonsContainer = document.getElementById("chapter-buttons");
+if (buttonsContainer) {
+  buttonsContainer.appendChild(boutonRecommencer);
+}
+
+
+
+
+
 const savedChapter = loadProgress();
 if (savedChapter) {
   save(savedChapter);
 } else {
   save("acceuil");
 }
+
+
 
