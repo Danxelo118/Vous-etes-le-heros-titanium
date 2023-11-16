@@ -131,7 +131,14 @@ const song = new Audio("./assets/audio/background.mp3");
 
 let twist = false;
 
-function goToChapter(chapterKey) {
+function save(chapterKey) {
+  localStorage.setItem("currentChapter", chapterKey);
+}
+
+function loadProgress() {
+  return localStorage.getItem("currentChapter");
+}
+function save(chapterKey) {
   const chapter = chapters[chapterKey];
   song.addEventListener(
     "ended",
@@ -170,7 +177,7 @@ function goToChapter(chapterKey) {
     const nouveauBtn = document.createElement("button");
     nouveauBtn.textContent = button.titre;
     nouveauBtn.addEventListener("click", () => {
-      goToChapter(button.destination);
+      save(button.destination);
     });
     buttonsContainer.appendChild(nouveauBtn);
   });
@@ -182,4 +189,11 @@ function goToChapter(chapterKey) {
     twist = true;
   }
 }
-goToChapter("acceuil");
+
+const savedChapter = loadProgress();
+if (savedChapter) {
+  save(savedChapter);
+} else {
+  save("acceuil");
+}
+
