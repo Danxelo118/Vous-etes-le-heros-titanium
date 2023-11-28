@@ -38,6 +38,13 @@ body {
     padding: 10px;
 }
 
+.title:hover {
+    font-family: 'Rubik Iso', cursive;
+    font-size: 105px;
+    max-width: 100%;
+    color: #ffdd00;
+    padding: 10px;
+}
 
 h1 {
     font-family: 'Helvetica';
