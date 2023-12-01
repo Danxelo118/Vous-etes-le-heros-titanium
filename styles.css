@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #411d13;
+    background-color: #34120a;
     padding: 20px;
     max-width: 900px;
     min-width: 400px;
@@ -42,7 +42,7 @@ body {
     font-family: 'Rubik Iso', cursive;
     font-size: 105px;
     max-width: 100%;
-    color: #ffdd00;
+    color: white;
     padding: 10px;
 }
 
@@ -63,17 +63,18 @@ p {
 }
 
 
+
 .image {
     max-width: 100%;
+    mix-blend-mode:screen;
 }
 
 #video {
     max-width: 100%;
+    mix-blend-mode:screen;
 }
 
 button {
-    display: flex;
-    flex-direction: row;
     border-radius: 10px;
     border: 5px solid #ffd000;
     background-color: #411d13;
