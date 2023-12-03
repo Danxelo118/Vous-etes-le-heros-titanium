@@ -34,6 +34,7 @@ body {
     font-family: 'Rubik Iso', cursive;
     font-size: 100px;
     max-width: 100%;
+    padding: 10px;
     color: #ffdd00;
     padding: 10px;
 }
@@ -42,8 +43,15 @@ body {
     font-family: 'Rubik Iso', cursive;
     font-size: 105px;
     max-width: 100%;
+    font-weight: bold;
     color: #ffdd00;
-    padding: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    to {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8);
+    }
 }
 
 h1 {
