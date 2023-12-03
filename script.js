@@ -2,7 +2,7 @@ const chapters = {
   acceuil: {
     titre: "Le commencement",
     description:
-      "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont chnagé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées.",
+      "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont changé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées.",
     image: "./assets/img/city.jpg",
     video: "",
     son: "",
@@ -12,7 +12,7 @@ const chapters = {
   debut: {
     titre: "10h",
     description:
-      "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de toi.",
+      "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de position.",
     image: "",
     video: "./assets/videos/pluie.mp4",
     son: "./assets/audio/rain.mp3",
@@ -35,7 +35,7 @@ const chapters = {
   base: {
     titre: "La base militaire",
     description:
-      "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang : bruyant mais rapide et une Corolla, subtile mais plus lente.",
+      "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang: bruyant mais rapide et une Corolla: subtile mais plus lente.",
     image: "./assets/img/base.jpg",
     video: "",
     son: "",
@@ -208,8 +208,6 @@ buttonsContainer = document.getElementById("chapter-buttons");
 if (buttonsContainer) {
   buttonsContainer.appendChild(boutonRecommencer);
 }
-
-
 
 
 
