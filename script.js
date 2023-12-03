@@ -3,7 +3,7 @@ const chapters = {
     titre: "Le commencement",
     description:
       "Tu es un astronaute envoyé en mission sur une autre planète. Mais la mission prend court, tu dois retourner sur Terre en faisant un voyage retour de 3 ans. On te dit que des aliens ont envahis la terre et ont changé l'atmosphère. Des nuages d'acide apparaîssent désormais à 22h chaque jour. En court de route, les communications sont soudainement coupées.",
-    image: "./assets/img/city.jpg",
+    image: "./assets/img/landing.png",
     video: "",
     son: "",
     boutons: [{ titre: "Commencer", destination: "debut" }],
@@ -12,21 +12,21 @@ const chapters = {
   debut: {
     titre: "10h",
     description:
-      "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de position.",
+      "Il est 10h00, tu atteris sur la planète Terre. La planète semble vide, tu as deux destinations proches de ta position. Il se trouve une maison abandonnée au coin de la rue ou une base militaire abandonnée en face.",
     image: "",
     video: "./assets/videos/pluie.mp4",
     son: "./assets/audio/rain.mp3",
     boutons: [
-      { titre: "Aller chez toi", destination: "maison" },
+      { titre: "Aller à la maison", destination: "maison" },
       { titre: "Aller à la base", destination: "base" },
       { titre: "Recommencer", destination: "acceuil" }
     ],
   },
 
   maison: {
-    titre: " Au bercaille",
+    titre: "Une surprise inattendue",
     description: "Des créatures aliens présentes dans la maison te tuent.",
-    image: "./assets/img/aliens-death.jpg",
+    image: "./assets/img/maison.avif",
     video: "",
     son: "./assets/audio/aliens.mp3",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
@@ -35,8 +35,8 @@ const chapters = {
   base: {
     titre: "La base militaire",
     description:
-      "La base est abandonnée mais tu y trouves plein de ressources. Tu trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules disponibles. Une Mustang: bruyant mais rapide et une Corolla: subtile mais plus lente.",
-    image: "./assets/img/base.jpg",
+      "La base est abandonnée mais tu y trouves plein de ressources. Tu y trouves une carte pour aller à un camp de survivants à 9h de temps et deux véhicules qui fonctionnent dans le stationnement. Une Mustang: bruyant mais rapide et une Corolla: subtile mais plus lente.",
+    image: "./assets/img/bunker.jpg",
     video: "",
     son: "",
     boutons: [
@@ -50,7 +50,7 @@ const chapters = {
     titre: "20h",
     description:
       "Le véhicule émet beaucoup de bruits de moteur, cela attire les créatures aliens et ils bloquent le chemin tu te retrouves coincé à mi-chemin de la destination, tu lâches ta voirture pour continuer à pied mais perd ta carte, tu va à la mémoire. Il est 20h00, après une longue marche tu vois un groupe de créature dévorer le cadavre d'une fillette, ils bloquent le chemin. ",
-    image: "./assets/img/mustang.jpg",
+    image: "./assets/img/mustang.avif",
     video: "",
     son: "./assets/audio/mustang.mp3",
     boutons: [
@@ -63,7 +63,7 @@ const chapters = {
   affrontement: {
     titre: "Monté en courage",
     description: "Tu finis par mourir, ils étaient trop nombreux pour toi",
-    image: "./assets/img/fight.jpg",
+    image: "",
     video: "",
     son: "./assets/audio/aliens.mp3",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
@@ -73,7 +73,7 @@ const chapters = {
     titre: "Stratégie de retrait",
     description:
       "Tu arrives juste à temps aux portes du camp vers 21h58 mais les survivants déja inquiets de la disparition d'un de leur membre te font pas confiance et te laisse dehors. Tu meurs brûlé par l'acide.",
-    image: "./assets/img/road.jpg",
+    image: "./assets/img/dead.avif",
     video: "",
     son: "",
     boutons: [
@@ -98,7 +98,7 @@ const chapters = {
     titre: "Concentré",
     description:
       "Tu continues ton chemin et laisse la gamine toute seule. Après 30 minutes de marches, tu trouves finalement devant les portes du camp!",
-    image: "./assets/img/camp.jpg",
+    image: "./assets/img/usine.avif",
     video: "",
     son: "assets/audio/door.mp3",
     boutons: [
@@ -110,7 +110,7 @@ const chapters = {
     titre: "Réussite",
     description:
       "La fille que tu avais laissé à son sort te répond à travers l'ouverture de la porte. Elle te reconnaît et les autres réfugiés te refusent l'accès. Tu te retrouves seul dehors et il est 10h... Le nuage commence à faire son apparition.",
-    image: "./assets/img/fille-camp.jpg",
+    image: "./assets/img/failed.avif",
     video: "",
     son: "",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
@@ -120,7 +120,7 @@ const chapters = {
     titre: "Une nouvelle amie",
     description:
       "Tu sauves la fille. Elle te remercie et elle te guide vers le camp de survivants, tu y arrive à 19h30 sans problème. Les survivants t'acceuillent dans leur groupe car tu as sauvé la gamine du camp. Tu survis. Félicitations! ",
-    image: "./assets/img/good-camp.jpg",
+    image: "./assets/img/congrats.avif",
     video: "",
     son: "",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],

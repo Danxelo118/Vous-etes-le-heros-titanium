@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #34120a;
+    background-color: black;
 }
 
 .conteneur {
@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #411d13;
+    background-color: black;
     padding: 20px;
     max-width: 900px;
     min-width: 400px;
@@ -35,7 +35,7 @@ body {
     font-size: 100px;
     max-width: 100%;
     padding: 10px;
-    color: #ffdd00;
+    color: #7a7a7a;
     padding: 10px;
 }
 
@@ -44,7 +44,7 @@ body {
     font-size: 105px;
     max-width: 100%;
     font-weight: bold;
-    color: #ffdd00;
+    color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
     animation: glow 2s infinite alternate;
   }
@@ -58,17 +58,43 @@ h1 {
     font-family: 'Helvetica';
     font-size: 25px;
     max-width: 100%;
-    color: #ffdd00;
+    color: #7a7a7a;
     padding: 10px;
 }
+
+h1:hover {
+    max-width: 100%;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    to {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 p {
     font-family: 'Helvetica';
     font-size: 25px;
     max-width: 100%;
-    color: #ffdd00;
+    color: #7a7a7a;
     padding: 10px;
 }
+
+p:hover {
+    max-width: 100%;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    to {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 
 .image {
@@ -83,9 +109,9 @@ button {
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    border: 5px solid #ffd000;
-    background-color: #411d13;
-    color: #ffdd00;
+    border: 5px solid #6a6b70;
+    background-color: black;
+    color: #6a6b70;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -93,18 +119,14 @@ button {
 }
 
 button:hover {
-    background-color: #ffd000;
-    color: #000;
-    border-radius: 10px;
-    border: 5px solid #000;
-}
-
-.barre {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 30px;
-    width: 100%;
-    margin-top: 5px;
+    max-width: 100%;
+    border: 5px solid #fff;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    to {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8);
+    }
 }
