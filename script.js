@@ -63,7 +63,7 @@ const chapters = {
   affrontement: {
     titre: "Monté en courage",
     description: "Tu finis par mourir, ils étaient trop nombreux pour toi",
-    image: "",
+    image: "./assets/img/killed.avif",
     video: "",
     son: "./assets/audio/aliens.mp3",
     boutons: [{ titre: "Recommencer", destination: "acceuil" }],
