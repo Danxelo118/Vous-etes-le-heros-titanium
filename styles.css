@@ -175,7 +175,7 @@ button:hover {
     }
 }
 
-#muteCheckbox + label {
+#muteCheckbox+label {
     border-radius: 10px;
     border: 5px solid #7a7a7a;
     background-color: black;
@@ -187,7 +187,7 @@ button:hover {
     padding: 10px 20px;
 }
 
-#muteCheckbox + label:hover {
+#muteCheckbox+label:hover {
     max-width: 100%;
     border: 5px solid #fff;
     color: #fff;
@@ -200,6 +200,3 @@ button:hover {
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8);
     }
 }
-
- 
- 
