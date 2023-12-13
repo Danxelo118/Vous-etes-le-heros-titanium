@@ -135,6 +135,7 @@ let twist = false;
 
 let buttonsContainer;
 
+
 function save(chapterKey) {
   localStorage.setItem("currentChapter", chapterKey);
 }
@@ -218,5 +219,22 @@ if (savedChapter) {
   save("acceuil");
 }
 
+const muteCheckbox = document.getElementById("muteCheckbox");
 
+function toggleMute() {
+  const isMuted = muteCheckbox.checked;
+  song.muted = isMuted;
+  localStorage.setItem("muteStatus", isMuted);
+}
 
+muteCheckbox.addEventListener("change", toggleMute);
+
+function checkMuteStatus() {
+  const isMuted = localStorage.getItem("muteStatus") === "true";
+  muteCheckbox.checked = isMuted;
+  song.muted = isMuted;
+}
+
+window.onload = function () {
+  checkMuteStatus();
+};
